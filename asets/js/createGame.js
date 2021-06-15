@@ -14,7 +14,9 @@ function saveNewGame(e) {
 function createGameObject() {
     setup =  {
         name: document.querySelector("#nameGame").value,
-        setup: Array.from(Array(500), () => new Array(500))
+        setup: Array.from(Array(500), () => new Array(500)),
+        createdAt: new Date(),
+        savedAt: new Date()
        } 
        return setup;
 }
