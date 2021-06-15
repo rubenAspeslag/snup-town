@@ -1,18 +1,18 @@
 
 function saveGame(game) {
     if(getGame(game.name) === null) {
-        saveNewGame();
+        storeNewGame(game);
     } else {
-        saveExistingGame();
+        storeExistingGame(game);
     }
 }
 
-function saveNewGame(game) {
+function storeNewGame(game) {
     let games = getGames();
     games.push(game);
     putInLockalStorage("games", JSON.stringify(games));
 }
-function saveExistingGame() {
+function storeExistingGame(game) {
     let games = getGames();
     game.savedAt =  new Date();
     games[getGameIndex(game.name)] = game; 
