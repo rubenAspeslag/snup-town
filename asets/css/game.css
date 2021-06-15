@@ -1,0 +1,9 @@
+#playField {
+    display: flex;
+}
+#board{
+    display: 70%;
+}
+#menu {
+    display: 30%;
+}

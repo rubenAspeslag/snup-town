@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="asets/css/reset.css">
+    <link rel="stylesheet" href="asets/css/screen.css">
+    <link rel="stylesheet" href="asets/css/menu.css">
+    <link rel="stylesheet" href="asets/css/game.css">
+
+
+</head>
+<body>
+    <h1>snup town</h1>
+
+    <main>
+        <article id="titleScreen">
+            <ul>
+                <li> <a data-moveTo="game" id="newGame" href="#">new game</a> </li>
+                <li><h2>existing games: </h2></li>
+                <li>
+                    <ul data-moveTo="game" id="existingGames">
+                        <li><a>game 1</a></li>
+                        <li><a>game 2</a></li>
+                        <li><a>game 3</a></li>
+                    </ul>
+                </li>
+                <li><a data-moveTo="setings" href="#">setings</a></li>
+            </ul>
+        </article>
+
+        <article id="setings">
+            <h2>settings</h2>
+        </article>
+
+        <article id="game">
+            <form id="createGame">
+                <h2>create game</h2>
+                <label for="nameGame">name:</label>
+                <input type="text" id="nameGame" name="nameGame">
+                <input type="submit" value="create game">
+            </form>
+            
+            <div id="playField">
+                <div id="board"></div>
+                <ul id="menu">
+                    <li>coins: <label id="coins"></label></li>
+                    <li>storage <label id="storage"></label></li>
+                    <li>lv: <label id="lv"></label></li>
+                    <li>xp: <label id="xp"></label></li>
+
+                    <li><button>residential buildings</button></li>
+                    <li><button>roads</button></li>
+                    <li><button>Commursial buildings</button></li>
+                    <li><button>industrial buildings</button></li>
+                    <li><button>services</button></li>
+                </ul>
+            </div>
+        </article>
+    </main>
+    <script src="asets/js/start.js"> </script>
+    <script src="asets/js/menu.js"> </script>
+    <script src="asets/js/switchPage.js"></script>
+    <script src="asets/js/board.js"></script>
+    <script src="asets/js/createGame.js"></script>
+    <script src="asets/js/lockalStorage.js"></script>
+
+</body>
+</html>

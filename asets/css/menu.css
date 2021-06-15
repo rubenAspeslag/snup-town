@@ -1,0 +1,50 @@
+#titleScreen, #setings {
+    width: 70%;
+    height: 50%;
+    margin:auto  auto auto auto;
+}
+
+article ul li a{
+    text-align: center;
+    display: block;
+    box-shadow:inset 0px 39px 0px -24px #e67a73;
+	background-color:#e4685d;
+	border-radius:4px;
+	border:1px solid #ffffff;
+	
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:3.5em;
+	padding:6px 15px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35;
+}
+
+article ul li a:hover{
+    background-color:#eb675e;
+}
+article ul li a:active{
+    position:relative;
+	top:1px;
+}
+article ul li ul  {
+    display: flex;
+    justify-content: space-around;
+}
+article ul li ul li a {
+    font-size: 2em;
+    text-align: center;
+    display: block;
+    box-shadow:inset 0px 39px 0px -24px #e67a73;
+	background-color:#e4685d;
+	border-radius:4px;
+	border:1px solid #ffffff;
+	
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	padding:6px 15px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35;
+}
