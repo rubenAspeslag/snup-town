@@ -14,8 +14,13 @@ function getCurrentPage(element) {
     }
 
 }
-
+function showLoginscreen() {
+    document.querySelector("#setings").classList.toggle("invisable");
+    document.querySelector("#titleScreen").classList.toggle("invisable");
+    document.querySelector("#game").classList.toggle("invisable");
+}
 function showTitlescreen() {
     document.querySelector("#setings").classList.toggle("invisable");
+    document.querySelector("#login").classList.toggle("invisable");
     document.querySelector("#game").classList.toggle("invisable");
 }

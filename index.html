@@ -17,8 +17,9 @@
 
     <main>
         <article id="login">
+            <form id="loginForm">
             <label>I'm a</label>
-            <select>
+            <select id="authoriseMethod">
                 <option value="signIn">known user who wands to sign in</option>
                 <option value="signUp">new user who wands to sign up</option>
             </select>
@@ -29,6 +30,7 @@
             <input type="text" id="password">
 
             <input type="submit">
+        </form>
         </article>
         <article id="titleScreen">
             <ul>
@@ -73,6 +75,9 @@
                 </ul>
             </div>
         </article>
+        <div id="errors">
+
+        </div>
     </main>
     <script src="asets/js/start.js"> </script>
     <script src="asets/js/menu.js"> </script>
@@ -81,6 +86,8 @@
     <script src="asets/js/createGame.js"></script>
     <script src="asets/js/lockalStorage.js"></script>
     <script src="asets/js/saveGame.js"></script>
-
+    <script src="asets/js/login.js"></script>
+    <script src="asets/js/API.js"></script>
+    <script src="asets/js/proxy.js"></script>
 </body>
 </html>

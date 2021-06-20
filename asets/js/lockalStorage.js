@@ -14,3 +14,4 @@ function putInLockalStorage(key, value) {
 function getFromLockalStorage(key) {
     return localStorage.getItem(key);
 }
+

@@ -10,17 +10,17 @@ function saveGame(game) {
 function storeNewGame(game) {
     let games = getGames();
     games.push(game);
-    putInLockalStorage("games", JSON.stringify(games));
+   // putInLockalStorage("games", JSON.stringify(games));
 }
 function storeExistingGame(game) {
-    let games = getGames();
+    //let games = getGames();
     game.savedAt =  new Date();
     games[getGameIndex(game.name)] = game; 
-    putInLockalStorage("games", JSON.stringify(games));
+   // putInLockalStorage("games", JSON.stringify(games));
 }
 
 function getGames() {
-    return JSON.parse(getFromLockalStorage("games"));
+   // return JSON.parse(getFromLockalStorage("games"));
 }
 function getGame(game) {
     getGames().forEach((currentGame => {
