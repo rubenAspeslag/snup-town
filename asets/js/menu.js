@@ -6,3 +6,7 @@ function setPageMenuListeners() {
 function startOrCreateGameListeners() {
     document.querySelector("#newGame").addEventListener("click",createGame )
 }
+function loadGames() {
+    let games = API.getGames();
+    console.log(games)
+}

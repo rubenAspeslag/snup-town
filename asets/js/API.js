@@ -45,6 +45,19 @@ var API = {
         );
         return versions;
     },
+    getGames: async function () {
+        let versions;
+        let sessionID = getFromLockalStorage("sessionID");
+        let loginData = {};
+        loginData.sessionID = sessionID;
+        console.log(loginData);
+        await this.fetchFromServer(`${this.url}/getGames`,'POST', loginData).then( function(response){
+            checkForErrors(response);
+            versions = response.sessionID;
+            }
+        );
+        return versions;
+    },
     
 };
 function checkForErrors(response) {

@@ -8,7 +8,8 @@ async function login(e) {
     let sessionID = await getSessionID(loginData);
     console.log(sessionID);
     putInLockalStorage("sessionID",sessionID);
-    switchPage("titleScreen", "titleScreen")
+    switchPage("login", "titleScreen");
+    loadGames();
 }
 function getLoginData() {
     username = document.querySelector("#username").value;

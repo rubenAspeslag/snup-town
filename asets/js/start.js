@@ -19,5 +19,6 @@ function initScreen() {
         showLoginscreen()
     } else {
         showTitlescreen();
+        loadGames();
     }
 }
