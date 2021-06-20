@@ -5,6 +5,6 @@ function loadBoard(boardSetup) {
         currentField = document.createElement('div');
         currentRow.appendChild(currentRow);
     });
-    document.querySelector("board").appendChild(currentRow);
+    document.querySelector("#board").appendChild(currentRow);
 });
 }

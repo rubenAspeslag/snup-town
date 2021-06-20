@@ -9,7 +9,7 @@ function saveNewGame(e) {
     saveGame(game);
     document.querySelector("#playField").classList.toggle("invisable");
     document.querySelector("#createGame").classList.toggle("invisable");
-    return game.name;
+    loadBoard(game.setup);
 }
 function createGameObject() {
     setup =  {
