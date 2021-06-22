@@ -54,9 +54,38 @@ var API = {
         );
         return versions;
     },
+    getGame: async function () {
+        let versions;
+        await this.fetchFromServer(`${this.url}/getGame`,'POST', selectGame()).then( function(response){
+            checkForErrors(response);
+            versions = response.sessionID;
+            }
+        );
+        return versions;
+    },
+    createGame: async function(gameName) {
+        let versions;
+        await this.fetchFromServer(`${this.url}/createGame`,'POST', getCreateGameBody(gameName)).then( function(response){
+            checkForErrors(response);
+            versions = response.sessionID;
+            }
+        );
+        return versions;
+    }
 
     
-};
+}; 
+function getCreateGameBody(gameName) {
+    return {
+        "sessionID": getFromLockalStorage("sessionID"),
+        "gameName" : gameName
+    }
+}
+function selectGame(gameName) {
+    let game = authorise();
+    game.gameName = gameName;
+    return game;
+}
 function checkForErrors(response) {
     if (response.error !== undefined) {
         document.querySelector("#errors").insertAdjacentHTML("beforeend","<p>" + response.error + "</p>")

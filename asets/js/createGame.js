@@ -4,19 +4,8 @@ function createGame() {
 
 function saveNewGame(e) {
     e.preventDefault();
-    game = createGameObject();
-    console.log(game);
-    saveGame(game);
+    API.createGame(document.querySelector("#nameGame").Value);
     document.querySelector("#playField").classList.toggle("invisable");
     document.querySelector("#createGame").classList.toggle("invisable");
     loadBoard(game.setup);
-}
-function createGameObject() {
-    setup =  {
-        name: document.querySelector("#nameGame").value,
-        setup: Array.from(Array(500), () => new Array(500)),
-        createdAt: new Date(),
-        savedAt: new Date()
-       } 
-       return setup;
 }
