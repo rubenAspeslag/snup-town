@@ -47,21 +47,23 @@ var API = {
     },
     getGames: async function () {
         let versions;
-        let sessionID = getFromLockalStorage("sessionID");
-        let loginData = {};
-        loginData.sessionID = sessionID;
-        console.log(loginData);
-        await this.fetchFromServer(`${this.url}/getGames`,'POST', loginData).then( function(response){
+        await this.fetchFromServer(`${this.url}/getGames`,'POST', authorise()).then( function(response){
             checkForErrors(response);
             versions = response.sessionID;
             }
         );
         return versions;
     },
+
     
 };
 function checkForErrors(response) {
     if (response.error !== undefined) {
         document.querySelector("#errors").insertAdjacentHTML("beforeend","<p>" + response.error + "</p>")
     }
+}
+function authorise() {
+    let loginData = {};
+    loginData.sessionID = getFromLockalStorage("sessionID");
+    return loginData;
 }
