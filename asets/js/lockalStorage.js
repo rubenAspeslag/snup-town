@@ -1,8 +1,4 @@
-function initLocalStorage() {
-    if (getFromLockalStorage("games")=== null) {
-        putInLockalStorage("games", "[]");
-    }
-}
+
 function putInLockalStorage(key, value) {
     try {
         localStorage.setItem(key,value)
@@ -15,3 +11,9 @@ function getFromLockalStorage(key) {
     return localStorage.getItem(key);
 }
 
+function getCurrentGame() {
+    return localStorage.getItem("currentGame");
+}
+function setCurrentGame(gameName) {
+    localStorage.setItem("currentGame" , gameName);
+}

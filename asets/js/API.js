@@ -49,25 +49,28 @@ var API = {
         let versions;
         await this.fetchFromServer(`${this.url}/getGames`,'POST', authorise()).then( function(response){
             checkForErrors(response);
-            versions = response.sessionID;
+            versions = response;
             }
         );
         return versions;
     },
-    getGame: async function () {
+    getGame: async function (gameName) {
         let versions;
-        await this.fetchFromServer(`${this.url}/getGame`,'POST', selectGame()).then( function(response){
+        console.log(selectGame(gameName))
+        await this.fetchFromServer(`${this.url}/getGame`,'POST', selectGame(gameName)).then( function(response){
             checkForErrors(response);
-            versions = response.sessionID;
+            versions = response;
             }
         );
+        console.log(versions)
         return versions;
     },
     createGame: async function(gameName) {
         let versions;
+        console.log(getCreateGameBody(gameName));
         await this.fetchFromServer(`${this.url}/createGame`,'POST', getCreateGameBody(gameName)).then( function(response){
             checkForErrors(response);
-            versions = response.sessionID;
+            versions = response;
             }
         );
         return versions;

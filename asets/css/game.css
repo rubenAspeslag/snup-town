@@ -1,9 +1,28 @@
 #playField {
     display: flex;
+    height: 100%;
 }
+
 #board{
-    display: 70%;
+    width: 70%;
+    height: 100%;
+    overflow: scroll;
+}
+#fields{
+    height: fit-content;
+    width: fit-content;
+}
+#fields div {
+    height: 50px;
+    width: 100%;
+    display: flex;
+}
+#fields div div {
+    height: 100%;
+    width: 50px;
+    background-color: lawngreen;
+    border: black solid 1px;
 }
 #menu {
-    display: 30%;
+    width: 30%;
 }

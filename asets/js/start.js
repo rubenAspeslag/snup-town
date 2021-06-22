@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", init);
 function init()  {
     addEventListeners();
     initScreen();
-    initLocalStorage();
 }
 
 function addEventListeners() {
